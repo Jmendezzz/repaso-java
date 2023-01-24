@@ -1,0 +1,9 @@
+package services;
+
+import models.Product;
+import java.util.List;
+
+public interface ProductService {
+    void createProduct (String name, String category, double price);
+    List<Product> filterBooks();
+}
