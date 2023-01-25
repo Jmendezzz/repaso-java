@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Order {
-    private Long id;
+    private long id;
     private String status;
     private LocalDate orderDate;
     private LocalDate deliveryDate;
@@ -44,4 +44,19 @@ public class Order {
         this.deliveryDate = deliveryDate;
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }

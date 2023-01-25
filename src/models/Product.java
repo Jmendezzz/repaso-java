@@ -3,7 +3,7 @@ package models;
 import java.time.LocalDate;
 
 public class Product {
-    private Long id;
+    private long id;
     private String name;
     private String category;
     private double price;
