@@ -55,6 +55,7 @@ public class ProductImp implements ProductService {
     public void fillProductArrayList() {
         createProduct("Buzz Lightyear",CategoryEnum.TOYS.getNameCategory(),150);
         createProduct("Ropa bebé",CategoryEnum.BABYS.getNameCategory(),50);
+        createProduct("Tetero",CategoryEnum.BABYS.getNameCategory(),20);
         createProduct("Woody",CategoryEnum.TOYS.getNameCategory(),200);
         createProduct("Care papa",CategoryEnum.TOYS.getNameCategory(),300);
         createProduct("Diario Anna Frank",CategoryEnum.BOOKS.getNameCategory(),200);

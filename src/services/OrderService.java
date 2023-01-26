@@ -10,4 +10,6 @@ public interface OrderService {
     List<Order> getProductsByBabyCategory();
     List<Product> getProductsByCustomerLevelAndDates(int customerLevel, LocalDate startDate, LocalDate endDate);
     void fillOrderArrayList();
+    List<Order> getMostRecentOrders();
+    Double calculateTotalByDate(LocalDate date);
 }
