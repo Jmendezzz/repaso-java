@@ -27,6 +27,12 @@ public class OrderImp implements OrderService {
                 .filter(order ->order.getDeliveryDate().isAfter(startDate) && order.getDeliveryDate().isBefore(endDate))
                 .flatMap(order -> order.getProducts().stream())
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void fillOrderArrayList() {
+        orderList.add(new Order(1,1, LocalDate.of(2021,2,1), LocalDate.of(2021,2,1), ));
+
 
     }
 
@@ -34,4 +40,5 @@ public class OrderImp implements OrderService {
         return  products.stream()
                 .anyMatch(product -> product.getCategory().equals(CategoryEnum.BABYS.getNameCategory()));
     }
+
 }

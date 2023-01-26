@@ -9,4 +9,5 @@ import java.util.List;
 public interface OrderService {
     List<Order> getProductsByBabyCategory();
     List<Product> getProductsByCustomerLevelAndDates(int customerLevel, LocalDate startDate, LocalDate endDate);
+    void fillOrderArrayList();
 }
