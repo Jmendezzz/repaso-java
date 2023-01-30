@@ -6,10 +6,9 @@ import models.Product;
 import models.Customer;
 import services.OrderService;
 
+import java.sql.ClientInfoStatus;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class OrderImp implements OrderService {
@@ -58,9 +57,29 @@ public class OrderImp implements OrderService {
                 .collect(Collectors.summingDouble(Product::getPrice));
     }
 
+    @Override
+    public Double calculateAveragePayByDate(LocalDate date) {
+        return orderList.stream()
+                .filter(order -> order.getOrderDate().equals(date))
+                .flatMap(order -> order.getProducts().stream())
+                .collect(Collectors.averagingDouble(Product::getPrice));
+    }
+
+    @Override
+    public Map<Customer, List<Order>> mapOrdersGroupedByClient() {
+        return orderList.stream()
+                .filter(order -> order.)
+                );
+    }
+
     boolean isBabyCategory(List<Product> products){ // Determina si alguno de los productos de una orden tiene la categoria bebé.
         return  products.stream()
                 .anyMatch(product -> product.getCategory().equals(CategoryEnum.BABYS.getNameCategory()));
+    }
+    List<Order> getOrdersByCustomer(Customer customer){
+        return  orderList.stream()
+                .filter(order -> order.getCustomer().equals(customer))
+                .collect(Collectors.toList());
     }
 
 }

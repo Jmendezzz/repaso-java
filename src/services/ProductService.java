@@ -9,4 +9,5 @@ public interface ProductService {
     List<Product> getToysAndApplyDiscount();
     List<Product> getMostEconomicBooks();
     void fillProductArrayList();
+    List<Product> getProductsMostExpensiveByCategory();
 }

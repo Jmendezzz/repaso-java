@@ -65,6 +65,11 @@ public class ProductImp implements ProductService {
 
     }
 
+    @Override
+    public List<Product> getProductsMostExpensiveByCategory() {
+        return
+    }
+
     boolean isRepeatedId (Long id ){
 
         for(Product product : productList){
